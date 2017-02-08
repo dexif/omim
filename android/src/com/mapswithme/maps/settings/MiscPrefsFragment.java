@@ -60,7 +60,7 @@ public class MiscPrefsFragment extends BaseXmlSettingsFragment
           if (oldVal != newVal)
           {
             Config.setUseGoogleService(newVal);
-            LocationHelper.INSTANCE.initProvider(false /* forceNative */);
+            LocationHelper.INSTANCE.restart();
           }
           return true;
         }
